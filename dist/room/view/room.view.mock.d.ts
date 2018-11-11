@@ -1,0 +1,32 @@
+import { RoomView } from "./room.view.interface";
+export declare class RoomViewMock implements RoomView {
+    addMessageYouAreInHasBeenCalled: boolean;
+    getMessageHasBeenCalled: boolean;
+    getMessage_returnValue: string;
+    cleanInputHasBeenCalled: boolean;
+    addMessageFromYouHasBeenCalled: boolean;
+    addMessageFromYou_messageParam: string;
+    addNewMessageHasBeenCalled: boolean;
+    addNewMessage_messageParam: string;
+    showPingHasBeenCalled: boolean;
+    showIsTypingHasBeenCalled: boolean;
+    disableSendActionHasBeenCalled: boolean;
+    showWarningMessagePartnerDisconnectedHasBeenCalled: boolean;
+    showGoHomeActionHasBeenCalled: boolean;
+    hideLeaveTheRoomActionHasBeenCalled: boolean;
+    addMessageYouAreIn(): void;
+    getMessage(): string;
+    cleanInput(): void;
+    addMessageFromYou(message: string): void;
+    addNewMessage(message: string): void;
+    showPing(): void;
+    showIsTyping(): void;
+    disableSendAction(): void;
+    showWarningMessagePartnerDisconnected(): void;
+    showGoHomeAction(): void;
+    hideLeaveTheRoomAction(): void;
+    onGoHome(): void;
+    onIsTyping(): void;
+    onSendMessage(): void;
+    onLeaveTheRoom(): void;
+}

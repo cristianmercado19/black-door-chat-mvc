@@ -1,0 +1,44 @@
+{
+  "name": "black-door-chat-mvc",
+  "version": "1.0.0",
+  "description": "Black Door Chat MVC",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "nyc mocha -r ts-node/register -r ignore-styles -r jsdom-global/register lib/**/*.spec.ts",
+    "test-watch": "npm test -- --watch --watch-extensions ts",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && rm -rf build/temp"
+  },
+  "nyc": {
+    "extends": "nyc.config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianmercado19/black-door-chat-mvc.git"
+  },
+  "author": "Cristian Mercado",
+  "license": "MIT",
+  "homepage": "https://github.com/cristianmercado19/black-door-chat-mvc",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^11.12.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "source-map-support": "^0.5.8",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@types/chai-arrays": "^1.0.2",
+    "chai-arrays": "^2.0.0",
+    "rimraf": "^2.6.2"
+  }
+}

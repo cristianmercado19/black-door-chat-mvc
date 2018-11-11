@@ -1,0 +1,38 @@
+import { CreateRoomController } from '../controller/create-room.controller';
+import { CreateRoomView } from './create-room.view.interface';
+export declare class CreateRoomViewMock implements CreateRoomView {
+    controller: CreateRoomController;
+    showCreatingRoomHasBeenCalled: boolean;
+    showFirstKeyHasBeenCalled: boolean;
+    showFirstKey_firstKeyParam: string;
+    hideCreatingRoomHasBeenCalled: boolean;
+    shareKeyByEmailHasBeenCalled: boolean;
+    hideFirstKeyHasBeenCalled: boolean;
+    showSecondKeyHasBeenCalled: boolean;
+    secondKeyToReturn: string;
+    showOpeningRoomHasBeenCalled: boolean;
+    getSecondKeyHasBeenCalled: boolean;
+    showErrorMessageFirstKeyCanNotBeCreatedHasBeenCalled: boolean;
+    showWarningMessageSecondKeyShouldNotBeEmptyHasBeenCalled: boolean;
+    showErrorMessageInvalidSecondKeyForThisRoomHasBeenCalled: boolean;
+    hideOpeningRoomHasBeenCalled: boolean;
+    hideWarningMessagesHasBeenCalled: boolean;
+    hideErrorMessagesHasBeenCalled: boolean;
+    showCreatingRoom(): void;
+    hideCreatingRoom(): void;
+    showFirstKey(firstKey: string): void;
+    shareKeyByEmail(firstKey: string): void;
+    showSecondKey(): void;
+    hideFirstKey(): void;
+    getSecondKey(): string;
+    showOpeningRoom(): void;
+    showErrorMessageFirstKeyCanNotBeCreated(): void;
+    showWarningMessageSecondKeyShouldNotBeEmpty(): void;
+    showErrorMessageInvalidSecondKeyForThisRoom(): void;
+    hideOpeningRoom(): void;
+    hideWarningMessages(): void;
+    hideErrorMessages(): void;
+    onSecondKeyIsEntered(): void;
+    onFirstKeyHasBeenShared(): void;
+    onSharePrimaryKey(): void;
+}
