@@ -43,7 +43,7 @@ Although I could use other techniques for mocks, even other frameworks... I have
 
 ## Key idea
 
-As you could see, I focus on this **MVC pattern** in order to make the **View just simple as possible**. One effect of that is the amount of unit test allocated in this project.
+As you could see, I focus on **MVC pattern** in order to make the **View independent and just simple as possible**. One effect of that is the amount of unit test allocated in this project.
 
-Remember the key here is move all the complexity **outside** the final view implementation, which could be Angular / React / Backbone js or simply Vanilla JS.</br>
+Remember the key here is move all the complexity **outside** the final view implementation, which could be *Angular / React / Backbone js or simply Vanilla JS*</br>
 Whatever JS implementation will work with this model due to the fact that *the logic is in the controller* as an **independent** component in the MVC pattern.
